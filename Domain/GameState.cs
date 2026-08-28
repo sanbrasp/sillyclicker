@@ -5,10 +5,7 @@ internal class GameState
     internal string LayoutId { get; }
     internal int ClickedMask { get; }
     internal int MissCount { get; }
-
-    internal bool IsClicked { get; }
-
-
+    
     private GameState(string layoutId, int clickedMask, int missCount)
     {
         LayoutId = layoutId;
@@ -16,6 +13,7 @@ internal class GameState
         MissCount = missCount;
     }
 
+    
     internal static GameState Initial(string layoutId)
     {
         return new GameState(layoutId, clickedMask: 0, missCount: 0);
@@ -27,6 +25,13 @@ internal class GameState
         var newMissCount = layout.IsCorrectBox(boxIndex) ? MissCount : MissCount + 1;
 
         return new GameState(LayoutId, newMask, newMissCount);
+    }
+
+    internal bool IsBoxClicked(int boxIndex)
+    {
+        var bitAtIndex = ClickedMask & (1 << boxIndex);
+        
+        return bitAtIndex != 0;
     }
 
     internal bool IsLoss => MissCount >= 3;

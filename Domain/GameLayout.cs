@@ -6,6 +6,7 @@ internal class GameLayout
 {
     private readonly IReadOnlyList<BoxPosition> _boxPositions;
     private readonly int _correctBoxIndex;
+    internal int BoxCount => _boxPositions.Count;
 
     
     private GameLayout(IReadOnlyList<BoxPosition> boxPositions, int correctBoxIndex)
