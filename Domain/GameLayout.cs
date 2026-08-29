@@ -42,4 +42,6 @@ internal class GameLayout
         
         return bitAtCorrectBox != 0;
     }
+
+    internal BoxPosition GetBox(int boxIndex) => _boxPositions[boxIndex];
 }
