@@ -5,6 +5,13 @@ namespace SillyClicker.Rendering;
 
 internal class SvgRenderer
 {
+    /// <summary>
+    /// Renders a <see cref="GameLayout"/> and its current <see cref="GameState"/> as a static SVG image,
+    /// drawing each box in a different color depending on whether it has been clicked.
+    /// </summary>
+    /// <param name="layout">The layout describing where each box sits on the canvas.</param>
+    /// <param name="gameState">The current state, used to determine which boxes have been clicked.</param>
+    /// <returns>A complete SVG document as a string, ready to be saved to a file or served as an image.</returns>
     internal string Render(GameLayout layout, GameState gameState)
     {
         var sb = new StringBuilder();
@@ -15,8 +22,6 @@ internal class SvgRenderer
         {
             var box = layout.GetBox(i);
             
-            // TODO: decide on a fill color based on gameState.IsBoxClicked(i)
-            // something like: string fill = ?? ? "some color" : "some other color";
             string clickedBoxColor = "green";
             string unclickedBoxColor = "gray";
             

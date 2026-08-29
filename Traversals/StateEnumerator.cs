@@ -4,6 +4,13 @@ namespace SillyClicker.Traversals;
 
 internal class StateEnumerator
 {
+    /// <summary>
+    /// Walks every reachable <see cref="GameState"/> for the given layout using a breadth-first search (BFS),
+    /// starting from the initial state and stopping exploration at any win or loss.
+    /// </summary>
+    /// <param name="layout">The layout whose states should be enumerated.</param>
+    /// <param name="layoutId">The identifier used to tag every generated state with its owning layout.</param>
+    /// <returns>Every <see cref="GameState"/> reachable through legal play, including terminal win/loss states.</returns>
     internal List<GameState> EnumerateAllStates(GameLayout layout, string layoutId)
     {
         var results = new List<GameState>();
