@@ -35,4 +35,11 @@ internal class GameLayout
     {
         return boxIndex == _correctBoxIndex;
     }
+
+    internal bool IsWinningMask(int clickedMask)
+    {
+        var bitAtCorrectBox = clickedMask & (1 << _correctBoxIndex);
+        
+        return bitAtCorrectBox != 0;
+    }
 }
