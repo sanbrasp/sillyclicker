@@ -6,6 +6,7 @@ internal class GameState
     internal int ClickedMask { get; }
     internal int MissCount { get; }
     
+
     private GameState(string layoutId, int clickedMask, int missCount)
     {
         LayoutId = layoutId;
@@ -36,8 +37,5 @@ internal class GameState
 
     internal bool IsLoss => MissCount >= 3;
 
-    internal bool IsWin(GameLayout layout, int boxIndex)
-    {
-        return layout.IsCorrectBox(boxIndex);
-    }
+    internal bool IsWin(GameLayout layout) => layout.IsWinningMask(ClickedMask);
 }
