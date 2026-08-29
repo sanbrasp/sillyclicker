@@ -16,7 +16,7 @@ internal class StateEnumerator
             var current = queue.Dequeue();
             results.Add(current);
 
-            if (current.IsLoss) //TODO: fix IsWin logic
+            if (current.IsLoss || current.IsWin(layout))
             {
                 continue;
             }
