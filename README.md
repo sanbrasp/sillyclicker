@@ -1,7 +1,7 @@
 ﻿# SillyClicker
 
 _(Eventual goal):_  
-A stupid little click-guessing game. Click boxes, find the hidden object, get points. Guess wrong three times and 
+This aims to be a stupid little click-guessing game. Click boxes, find the hidden object, get points. Guess wrong three times and 
 something ridiculous happens. Eventually this should render as a static image on my GitHub/GitLab profile.
 
 ---
