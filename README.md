@@ -56,10 +56,8 @@ SillyClicker/
 
 ## Further plans
 
-- state enumeration and the SVG renderer.
-
-- JSON persistence for layout definitions.
-
+- JSON persistence for layout definitions
+- Some implementation of sorting algorithms
 
 ---
 
@@ -68,6 +66,7 @@ SillyClicker/
 - `GameLayout` internal static class - Done
 - `GameState` internal class - Done
 - `StateEnumerator` internal class - Done
+- `SvgRenderer` internal class - Done
 
 ---
 
